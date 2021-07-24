@@ -1,14 +1,30 @@
 .photo-card {
-  max-width: 400px;
+  flex-basis: calc(100% / 5);
+  height: 300px;
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 .gallery {
+  max-width: 1600px;
   display: flex;
-  justify-content: space-between;
+  //   justify-content: space-between;
   flex-wrap: wrap;
 }
 img {
-  object-fit: contain;
+  display: block;
+  object-fit: cover;
   height: auto;
+  max-width: 100%;
+}
+.info {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
 }
