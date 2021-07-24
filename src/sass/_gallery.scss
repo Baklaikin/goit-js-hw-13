@@ -1,0 +1,14 @@
+.photo-card {
+  max-width: 400px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+img {
+  object-fit: contain;
+  height: auto;
+}
