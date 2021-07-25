@@ -4,14 +4,14 @@ import Notiflix from 'notiflix';
 import cardTmt from './templates/cardTmt.hbs';
 import axios from 'axios';
 import ApiService from './api';
-import SimpleLightbox from '../node_modules/simplelightbox';
+// import SimpleLightbox from '../node_modules/simplelightbox';
 
 const refs = {
     searchForm: document.querySelector('#search-form'),
     galleryForm: document.querySelector('.gallery'),
     loadMoreBtn: document.querySelector('.load-more'),
 };
-const SimpleLightBox = new SimpleLightbox(('.gallery a'));
+// const SimpleLightBox = new SimpleLightbox(('.gallery a'));
 const Api = new ApiService();
 
 function onSearchInput(e) {
