@@ -37,7 +37,7 @@ async function fetchPictures(text) {
     try {
         const pictures = await axios.get(`${BASE_URL}${API_KEY}&q=${text}&${searchParams}&page=${page}`)
         const { totalHits, hits } = pictures.data;
-        Notiflix.Notify.success(`${totalHits}`);
+        Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
         createMarkup(hits);
         page += 1;
         return page, totalHits;
