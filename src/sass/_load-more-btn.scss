@@ -1,4 +1,5 @@
 .load-more {
+  opacity: 0;
   display: flex;
   //   justify-content: center;
   margin-left: auto;
@@ -6,4 +7,7 @@
   margin-bottom: 20px;
   background-color: rgb(41, 116, 91);
   color: white;
+}
+.is-visible {
+  opacity: 1;
 }
