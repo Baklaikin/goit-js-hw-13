@@ -4,13 +4,14 @@ import Notiflix from 'notiflix';
 import cardTmt from './templates/cardTmt.hbs';
 import axios from 'axios';
 import ApiService from './api';
+import SimpleLightbox from '../node_modules/simplelightbox';
 
 const refs = {
     searchForm: document.querySelector('#search-form'),
     galleryForm: document.querySelector('.gallery'),
     loadMoreBtn: document.querySelector('.load-more'),
 };
-
+const SimpleLightBox = new SimpleLightbox(('.gallery a'));
 const Api = new ApiService();
 
 function onSearchInput(e) {
@@ -40,7 +41,7 @@ function onLoadMoreBtnClick() {
         return data
     }).then(data => {
         if(data.hits.length < 40){
-           Notiflix.Notify.success(`We're sorry, but you've reached the end of search results`);
+           Notiflix.Notify.info(`We're sorry, but you've reached the end of search results`);
            refs.loadMoreBtn.classList.remove('is-visible');
        }
     });   
